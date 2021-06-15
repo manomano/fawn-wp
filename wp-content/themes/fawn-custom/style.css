@@ -1,0 +1,369 @@
+/*!
+Theme Name: fawn-custom
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.1
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: fawn-custom
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+fawn-custom is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic
+	- Normalize
+	- Box sizing
+# Base
+	- Typography
+	- Elements
+	- Links
+	- Forms
+## Layouts
+# Components
+	- Navigation
+	- Posts and pages
+	- Comments
+	- Widgets
+	- Media
+	- Captions
+	- Galleries
+# plugins
+	- Jetpack infinite scroll
+# Utilities
+	- Accessibility
+	- Alignments
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+
+/* Normalize
+--------------------------------------------- */
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+	 ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+    /*line-height: 1.15;*/
+    /*-webkit-text-size-adjust: 100%;*/
+    /*font-size: 10px;*/
+}
+
+/* Sections
+	 ========================================================================== */
+
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+@font-face {
+    font-family: "groteskPro-regular";
+    src: url("./fonts/AkzidenzGroteskPro-Regular.woff2") format("woff2"),
+    url("./fonts/AkzidenzGroteskPro-Regular.woff") format("woff"),
+    url("./fonts/AkzidenzGroteskPro-Regular.otf");
+}
+
+@font-face {
+    font-family: "groteskPro-mdex";
+    src: url("./fonts/AkzidenzGroteskPro-MdEx.woff2") format("woff2"),
+    url("./fonts/AkzidenzGroteskPro-MdEx.woff") format("woff"),
+    url("./fonts/AkzidenzGroteskPro-MdEx.otf");
+}
+
+@font-face {
+    font-family: "groteskPro-ext";
+    src: url("./fonts/AkzidenzGroteskPro-ext.woff2") format("woff2"),
+    url("./fonts/AkzidenzGroteskPro-ext.woff") format("woff"),
+    url("./fonts/AkzidenzGroteskPro-ext.otf");
+}
+
+
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+    margin: 0;
+    font-family: "groteskPro-regular";
+
+}
+
+
+main {
+    display: block;
+}
+
+.site-header {
+    height: 74px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 0 15px 0;
+    border-bottom: 1px solid black;
+}
+
+nav {
+
+    flex-basis: 48rem;
+    padding: 0;
+    margin: 0;
+}
+
+.logo {
+    font-family: "groteskPro-mdex";
+    font-weight: 600;
+    font-size: 3rem;
+    text-transform: uppercase;
+    display: flex;
+    width: 14rem;
+
+    justify-content: space-between;
+}
+
+.logo .fawn-title {
+    position: relative;
+}
+
+
+.fawn-title {
+    position: absolute;
+    display: block;
+    bottom: -8px;
+    left: 0;
+}
+
+
+.menu-mainmenu-container ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.menu-mainmenu-container ul li {
+    flex: 0 0 12rem;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-mainmenu-container ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.25rem;
+    padding: 0 1rem;
+    margin: 0;
+    position: relative;
+    box-sizing: border-box;
+    font-family: "groteskPro-ext";
+}
+
+.menu-mainmenu-container ul li a:hover:after, .menu-mainmenu-container ul li a.selected:after {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 2.7rem;
+    left: -0.8rem;
+    bottom: 0rem;
+    border: 1px solid black;
+    border-top-left-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    transform: rotate(-5.52deg);
+
+}
+
+.fawn {
+    position: relative;
+    width: 2.8rem;
+    height: 4rem;
+}
+
+.fawn .bottom {
+    border-bottom: 12px solid black;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 2.8rem;
+}
+
+.fawn .up {
+    border-bottom: 12px solid black;
+    border-right: 12px solid black;
+    position: absolute;
+    left: 6px;
+    bottom: 22px;
+    width: 1.4rem;
+    height: 1.4rem;
+    transform: rotate(
+            45deg
+    );
+}
+
+.main-container {
+    width: 80%;
+    margin: 8rem auto 0 auto;
+    border: 1px solid black;
+    height: auto;
+}
+
+.flex {
+    display: flex;
+    height: calc(100vh - 75px - 0rem);
+    justify-content: space-between;
+    margin-bottom: 7%;
+}
+
+.about {
+
+}
+
+.about::after {
+    position: absolute;
+    content: "";
+    background: #EBEBEB;
+    width: 46vw;
+    right: 0;
+    top: 0;
+    height: 100%;
+    z-index: -1;
+}
+
+
+.left {
+    flex-basis: 45%;
+    background: #0a5b88;
+}
+
+.right {
+    flex-basis: 45%;
+    background: #00a0d2;
+}
+
+.relative {
+    position: relative;
+}
+
+.title-big {
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 500;
+    font-family: "groteskPro-mdex";
+    width: 61rem;
+    z-index: 1;
+}
+
+.title-big-ord {
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 500;
+    font-family: "groteskPro-mdex";
+    line-height: 4rem;
+}
+
+.padding-30 {
+    padding: 15% 0 0 0;
+}
+
+.paragraph {
+    font-size: 1rem;
+    line-height: 2rem;
+    font-weight: 400;
+    font-family: "groteskPro-ext";
+    text-align: justify;
+    text-justify: inter-word;
+    flex-basis: 50%;
+}
+
+.flex-mod-align {
+    align-items: flex-end;
+    height: 96%;
+}
+
+
+.round-button {
+    background-color: black;
+    color: white;
+    padding: 1.875rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "groteskPro-ext";
+    font-size: 1rem;
+    cursor: pointer;
+    height: 9rem;
+    width: 10rem;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: none;
+}
+
+.ellipse-button {
+    background-color: black;
+    color: white;
+    padding: 1.875rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "groteskPro-ext";
+    font-size: 1rem;
+    cursor: pointer;
+    height: 5rem;
+    width: 10rem;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: none;
+    /*transform: rotateZ(-7deg);*/
+}
+
+.narrow {
+    width: 80%;
+    margin-bottom: 5%;
+}
+
+.image-div{
+    background: #0A246A;
+    height: 40rem;
+}
+
+
+@media only screen and (max-width: 900px) {
+   html{
+       font-size:10px;
+   }
+}
+
+.reset-height{
+    height: auto;
+}
