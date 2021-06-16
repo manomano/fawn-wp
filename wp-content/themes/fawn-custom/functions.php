@@ -12,6 +12,15 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
+if ( ! function_exists( 'formatNumeration' ) ) :
+    function formatNumeration($number):string{
+        if($number<10){
+            return "0".strval($number);
+        }
+        return strval($number);
+    }
+endif;
+
 if ( ! function_exists( 'fawn_custom_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -103,6 +112,7 @@ if ( ! function_exists( 'fawn_custom_setup' ) ) :
 	}
 endif;
 add_action( 'after_setup_theme', 'fawn_custom_setup' );
+add_action( 'after_setup_theme', 'formatNumeration' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
