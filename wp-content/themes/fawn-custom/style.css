@@ -456,3 +456,16 @@ nav {
 .learn-more-container{
     align-items: baseline;
 }
+
+
+.vue-cont{
+    display: flex;
+}
+
+.vue-cont div{
+    border: 2px solid midnightblue;
+}
+
+.vue-cont div img {
+    height: 15rem;
+}

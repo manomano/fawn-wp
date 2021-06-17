@@ -107,7 +107,9 @@ foreach (['works', 'services', 'aboutus-one', 'aboutus-two', 'service-general'] 
         <?php } ?>
 
         <div class="flex image-div">
-            <div id="mount"></div>
+            <div id="mount">
+
+            </div>
         </div>
 
     </div>

@@ -561,7 +561,9 @@ function get_metadata_raw( $meta_type, $object_id, $meta_key = '', $single = fal
 	 * @param string $meta_type Type of object metadata is for. Accepts 'post', 'comment', 'term', 'user',
 	 *                          or any other object type with an associated meta table.
 	 */
+
 	$check = apply_filters( "get_{$meta_type}_metadata", null, $object_id, $meta_key, $single, $meta_type );
+
 	if ( null !== $check ) {
 		if ( $single && is_array( $check ) ) {
 			return $check[0];
@@ -613,6 +615,7 @@ function get_metadata_raw( $meta_type, $object_id, $meta_key = '', $single = fal
  * @return mixed Single metadata value, or array of values.
  */
 function get_metadata_default( $meta_type, $object_id, $meta_key, $single = false ) {
+
 	if ( $single ) {
 		$value = '';
 	} else {
