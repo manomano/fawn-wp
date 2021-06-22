@@ -345,6 +345,7 @@ nav {
     box-sizing: border-box;
     border-radius: 50%;
     border: none;
+    white-space: nowrap;
     /*transform: rotateZ(-7deg);*/
 }
 
@@ -390,8 +391,8 @@ nav {
 }
 
 .image-div {
-    background: #0A246A;
-    height: 40rem;
+    background: #cee2e2;
+    height: 30rem;
 }
 
 
@@ -403,7 +404,7 @@ nav {
 
 .reset-height {
     height: auto;
-    margin:0;
+    margin: 0;
 }
 
 .reset-flex-alignment {
@@ -443,29 +444,148 @@ nav {
     line-height: 2rem;
 }
 
-.padding-v-10{
+.padding-v-10 {
     padding: 5% 0 5% 0;
     border-top: 1px solid black;
 }
 
-.plain-flex{
+.plain-flex {
     display: flex;
     align-items: flex-end;
 }
 
-.learn-more-container{
+.learn-more-container {
     align-items: baseline;
 }
 
 
-.vue-cont{
-    display: flex;
+.vue-cont {
+    height: 100%;
+    border: 1px solid red;
+    position: relative;
+    box-sizing: border-box;
+    width: fit-content
+
 }
 
-.vue-cont div{
-    border: 2px solid midnightblue;
+.gallery-container{
+    /*display: grid;*/
+    /*grid-template-columns: 1fr 1fr 1fr 1fr;*/
+    /*grid-column-gap: 4rem;*/
+    /*position: absolute;*/
+    /*top:0;*/
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+
+    width: 4240px;
+
 }
+
+
+.list-complete-item {
+    transition: all 1s;
+
+
+
+}
+.list-complete-enter, .list-complete-leave-to
+    /* .list-complete-leave-active below version 2.1.8 */ {
+    /*opacity: 0;*/
+    /*transform: translateX(30px);*/
+}
+.list-complete-leave-active {
+    position: absolute;
+}
+
+.cursor_right{
+    /*http://fawn.test/wp-content/themes/fawn-custom/images/arrow.png*/
+    /*cursor: url('/wp-content/themes/fawn-custom/images/arrow.png'), auto;*/
+    cursor: url("https://img.icons8.com/ios-filled/50/000000/arrow.png"), auto;
+
+}
+
+.cursor_left{
+    cursor:url("https://img.icons8.com/ios-filled/50/000000/chevron-left.png"),auto;
+}
+
 
 .vue-cont div img {
     height: 15rem;
+}
+
+.work {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding-left: 3rem;
+}
+
+.work-title {
+    align-items: center;
+    font-family: "groteskPro-mdex";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+
+}
+
+.work-content {
+    align-items: center;
+    width: 30rem;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.work-background {
+    width: 30rem;
+    height: 18rem;
+    background-repeat: no-repeat;
+    margin-bottom: 1rem;
+    position: relative;
+    background-size: cover;
+}
+
+.parent-div {
+    width: 100%;
+    margin: 0 0 0 auto;
+    overflow: hidden;
+}
+
+.work-label {
+    position: relative;
+    width: 6.25rem;
+    height: 2.5rem;
+    left: 3rem;
+    top: 1rem;
+}
+
+.work-label span {
+    display: inline-block;
+    position: absolute;
+    z-index: 10;
+    white-space: nowrap;
+    /*left: 1rem;*/
+    top: 0.5rem;
+    text-align: center;
+
+    width: 100%;
+}
+
+.work-label:after {
+    content: "";
+    position: absolute;
+    background: white;
+    top: 0;
+    left: 0;
+    width: 6.25rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    transform: rotate(
+            -5.52deg
+    );
+
+
 }

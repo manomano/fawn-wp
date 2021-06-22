@@ -64,9 +64,11 @@ foreach (['works', 'services', 'aboutus-one', 'aboutus-two', 'service-general'] 
                 </div>
             </div>
         </div>
+    </div>
         <div class="flex image-div">
 
         </div>
+    <div class="main-container">
         <div class="flex reset-height">
             <div class="left">
                 <div class="title-big-ord"><?php echo $thePosts['service-general'][0]->post_title ?></div>
@@ -105,14 +107,14 @@ foreach (['works', 'services', 'aboutus-one', 'aboutus-two', 'service-general'] 
                 </div>
             </div>
         <?php } ?>
-
+    </div>
         <div class="flex image-div">
             <div id="mount">
 
             </div>
         </div>
 
-    </div>
+
 
 
 <?php
